@@ -1,7 +1,7 @@
 <?php
 
 /*
-    This is a PHP client interface to the Wikifier wikiserver.
+    This is a PHP client interface to the wikifier wikiserver.
     Create a client instance with
     $client = new Wikiclient($path_to_socket, $wiki_name, $wiki_password);
 
@@ -175,6 +175,11 @@ class Wikiclient {
     // check connection
     function ping() {
         return $this->command('ping');
+    }
+    
+    // get last 100 log lines
+    function logs() {
+        return $this->command('logs');
     }
 
     /*********** PUBLIC WRITE METHODS ***********/

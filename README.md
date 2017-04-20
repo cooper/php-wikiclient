@@ -79,10 +79,10 @@ Returns an object with properties:
 $wikiclient->page_code($name);
 ```
 
-Requests the Wikifier source code for a page.
+Requests the wikifier source code for a page.
 
 Returns an object with properties:
-* __->content__ - page's Wikifier source code.
+* __->content__ - page's wikifier source code.
 * __->file__ - page filename relative to the wiki's page root `@dir.page`.
 * __->path__ - absolute path to the page filename.
 * __->type__ - `"page_code"`.
