@@ -210,6 +210,14 @@ class Wikiclient {
             'name' => $name
         ));
     }
+    
+    function page_diff($name, $from, $to) {
+        return $this->command('page_diff', array(
+            'name' => $name,
+            'from' => $from,
+            'to'   => $to
+        ));
+    }
 
     function model_save($name, $content, $message) {
         return $this->command('model_save', array(
