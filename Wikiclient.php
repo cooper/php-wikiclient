@@ -204,6 +204,12 @@ class Wikiclient {
             'new_name' => $new_name
         ));
     }
+    
+    function page_revs($name) {
+        return $this->command('page_revs', array(
+            'name' => $name
+        ));
+    }
 
     function model_save($name, $content, $message) {
         return $this->command('model_save', array(
