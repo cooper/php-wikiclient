@@ -62,7 +62,7 @@ class Wikiclient {
     }
 
     // send a command/message.
-    private function command($command, $opts = array()) {
+    function command($command, $opts = array()) {
         if ($command != 'wiki' && !$this->connected)
             $this->connect(1, $command == 'login');
         $opts['close'] = true;
