@@ -70,7 +70,6 @@ class Wikiclient {
         // send request
         $req = array($command, $opts);
         if (!fwrite($this->sock, json_encode($req)."\n")) {
-            unset();
             if (isset($this->session_id) {
                 unset($this->session_id);
                 if ($this->login_again_cb)
