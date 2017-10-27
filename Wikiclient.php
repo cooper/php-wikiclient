@@ -87,6 +87,7 @@ class Wikiclient {
 
         // check if the session expired.
         if (isset($res->login_again)) {
+            unset($this->session_id);
             if ($this->login_again_cb)
                 $this->login_again_cb->__invoke();
             return;
