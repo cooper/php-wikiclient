@@ -3,6 +3,13 @@
 This is a PHP interface to the [wikifier](https://github.com/cooper/wikifier)
 server.
 
+## Sorry, this documentation is not up-to-date.
+
+If you're using this API, you're more than likely capable of understanding it
+just by [looking at the code](Wikiclient.php). Also, the return value for these
+functions is usually just a standard object with the properties returned by the
+respective [wikiserver command](http://wikifier.notroll.net/page/doc/technical/server-commands).
+
 ## Constructor
 
 Create a new wikiclient instance.

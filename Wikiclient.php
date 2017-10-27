@@ -112,7 +112,7 @@ class Wikiclient {
     }
 
     // send a page code request.
-    function page_code($name, $display_page) {
+    function page_code($name, $display_page = false) {
         return $this->command('page_code', array(
             'name'         => $name,
             'display_page' => $display_page
@@ -127,7 +127,7 @@ class Wikiclient {
     }
 
     // send a model code request.
-    function model_code($name, $display_model) {
+    function model_code($name, $display_model = false) {
         return $this->command('model_code', array(
             'name'          => $name,
             'display_model' => $display_model
@@ -142,11 +142,12 @@ class Wikiclient {
     }
 
     // send an image request.
-    function image($name, $width, $height) {
+    function image($name, $width = 0, $height = 0, $scale = 0) {
         return $this->command('image', array(
             'name'   => $name,
             'width'  => $width,
-            'height' => $height
+            'height' => $height,
+            'scale'  => $scale
         ));
     }
 
@@ -158,10 +159,9 @@ class Wikiclient {
     }
 
     // send a category posts request.
-    function cat_posts($name, $page_n) {
+    function cat_posts($name) {
         return $this->command('cat_posts', array(
-            'name'   => $name,
-            'page_n' => $page_n
+            'name'   => $name
         ));
     }
 
@@ -184,7 +184,7 @@ class Wikiclient {
 
     /*********** PUBLIC WRITE METHODS ***********/
 
-    function page_save($name, $content, $message) {
+    function page_save($name, $content, $message = null) {
         return $this->command('page_save', array(
             'name'    => $name,
             'content' => $content,
@@ -219,7 +219,7 @@ class Wikiclient {
         ));
     }
 
-    function model_save($name, $content, $message) {
+    function model_save($name, $content, $message = null) {
         return $this->command('model_save', array(
             'name'    => $name,
             'content' => $content,
